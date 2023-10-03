@@ -5,6 +5,7 @@ for i in range(10):
             continue
         if i == 0 and j == 1:
             print("{}{}".format(i, j))
+            continue
         if j == 9 and i == 8:
             print(" {}{}".format(i, j))
             continue
