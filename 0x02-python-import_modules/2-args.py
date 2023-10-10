@@ -4,6 +4,8 @@ if __name__ == "__main__":
     leng = len(argv) - 1
     if leng == 1:
         print("{:d} argument:".format(leng))
+    elif leng == 0:
+        print("0 arguments.")
     else:
         print("{:d} arguments:".format(leng))
     for i in range(1, len(argv)):
