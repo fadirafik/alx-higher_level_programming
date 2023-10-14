@@ -15,10 +15,9 @@ listint_t *insert_node(listint_t **head, int number)
 
 	temp = *head;
 	prev = temp;
+
 	while (temp != NULL)
 	{
-		if(*head == NULL)
-		
 		if (number < temp->n)
 		{
 			new = malloc(sizeof(listint_t));
