@@ -12,9 +12,6 @@ int is_palindrome(listint_t **head)
 	listint_t *end;
 
 	end = *head;
-	paral = malloc(sizeof(listint_t));
-	if (paral == NULL)
-		return (0);
 	paral = NULL;
 
 	if (!*head)
