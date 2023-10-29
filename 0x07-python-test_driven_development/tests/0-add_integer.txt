@@ -30,3 +30,11 @@ test only one number:
     Traceback (most recent call last):
     ...
     TypeError: b must be an integer
+
+    >>> add_integer(2.3, 1.0)
+    3
+    
+    >>> add_integer("hello", "there")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
