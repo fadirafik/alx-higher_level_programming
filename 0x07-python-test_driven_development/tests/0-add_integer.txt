@@ -1,0 +1,30 @@
+the ``test`` module
+===================
+import module:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+test basic:
+    >>> add_integer(1, 1)
+    2
+
+    >>> add_integer(-1, 1)
+    0
+
+    >>> add_integer(1, )
+    99
+
+    >>> add_integer(99)
+    197
+
+    >>> add_integer(-100, -200)
+    -300
+
+    >>> add_integer("alo", 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer(1, "alo")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
