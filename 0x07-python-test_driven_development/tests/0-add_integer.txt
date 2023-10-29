@@ -7,9 +7,11 @@ test basic:
     >>> add_integer(1, 1)
     2
 
+test one negative:
     >>> add_integer(-1, 1)
     0
 
+test only one number:
     >>> add_integer(1, )
     99
 
