@@ -8,11 +8,18 @@ class Rectangle:
     """a rectangle class"""
 
     def __init__(self, width=0, height=0):
+        """ initialize a new rectangle
+
+        args:
+            width
+            height
+        """
         self.__height = height
         self.__width = width
 
     @property
     def width(self):
+        """returns the width instance attribute"""
         return self.__width
 
     @width.setter
@@ -25,6 +32,7 @@ class Rectangle:
 
     @property
     def height(self):
+        """returns the height instance attribute"""
         return self.__height
 
     @height.setter
