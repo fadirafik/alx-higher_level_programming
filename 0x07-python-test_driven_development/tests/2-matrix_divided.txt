@@ -52,3 +52,7 @@ missing two arguments test:
     Traceback (most recent call last):
     ...
     TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+missing one argument test:
+    >>> matrix_divided([[3]])
+    
