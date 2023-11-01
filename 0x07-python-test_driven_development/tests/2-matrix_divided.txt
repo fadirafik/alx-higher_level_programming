@@ -46,3 +46,6 @@ div is a float test:
     >>> matrix = [[3, 3], [3, 3]]
     >>> matrix_divided(matrix, 1.5)
     [[2.0, 2.0], [2.0, 2.0]]
+
+missing two arguments test:
+    >>>matrix_divided()
