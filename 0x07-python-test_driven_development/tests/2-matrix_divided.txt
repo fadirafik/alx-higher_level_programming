@@ -30,3 +30,7 @@ divide by zero test:
     ...
     ZeroDivisionError: division by zero
 
+one row matrix test:
+    >>> matrix = [[3]]
+    >>> matrix_divided(matrix, 3)
+    [[1.0]]
