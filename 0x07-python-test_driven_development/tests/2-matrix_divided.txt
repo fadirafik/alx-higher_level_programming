@@ -41,3 +41,8 @@ div not a number test:
     Traceback (most recent call last):
     ...
     TypeError: div must be a number
+
+div is a float test:
+    >>> matrix = [[3, 3], [3, 3]]
+    >>> matrix_divided(matrix, 1.5)
+    [[2.0, 2.0], [2.0, 2.0]]
