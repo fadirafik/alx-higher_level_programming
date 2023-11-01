@@ -34,3 +34,10 @@ one row matrix test:
     >>> matrix = [[3]]
     >>> matrix_divided(matrix, 3)
     [[1.0]]
+
+div not a number test:
+    >>> matrix = [[3]]
+    >>> matrix_divided(matrix, "al")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
