@@ -1,0 +1,24 @@
+the ``test`` module
+===================
+import module:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+basic test:
+    >>> say_my_name("fadi","haddad")
+    My name is fadi haddad
+
+last name missing test:
+    >>> say_my_name("fadi")
+    My name is fadi
+
+first name number test:
+    >>> say_my_name(12, "haddad")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+last name number test:
+    >>> say_my_name("haddad", 12)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string

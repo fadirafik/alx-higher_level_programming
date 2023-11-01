@@ -1,0 +1,46 @@
+the ``test`` module
+===================
+import module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+basic test:
+    >>> text_indentation("abc")
+    abc
+
+? test:
+    >>> text_indentation("?a")
+    ?
+    <BLANKLINE>
+    a
+
+: test:
+    >>> text_indentation(": a")
+    :
+    <BLANKLINE>
+     a
+
+. test:
+    >>> text_indentation("...")
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+
+integer test:
+    >>> text_indentation(1)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+new line test:
+    >>> text_indentation("this \n is ? a new test")
+    this 
+     is ?
+    <BLANKLINE>
+     a new test
+
+empty test:
+    >>> text_indentation("")
+    
