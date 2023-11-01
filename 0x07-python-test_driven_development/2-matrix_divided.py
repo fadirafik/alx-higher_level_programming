@@ -22,7 +22,7 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    
+
     if len(matrix) == 1 and isinstance(matrix[0], int):
         newmatrix.append(matrix[0]/div)
         return newmatrix
@@ -32,8 +32,8 @@ def matrix_divided(matrix, div):
             raise TypeError("Each row of the matrix must have the same size")
         for i in row:
             if not isinstance(i, (int, float)):
-                raise TypeError\
-                    ("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix '\
+                                '(list of lists) of integers/floats")
             newlist.append(round(i/div, 2))
             c += 1
         newmatrix.append(newlist)
