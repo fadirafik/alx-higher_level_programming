@@ -11,3 +11,22 @@ basic test:
     >>> a.append(1)
     >>> a.print_sorted()
     [1, 2, 3]
+
+not defined test:
+    >>> MyList = __import__('1-my_list').MyList
+    >>> my_list2.print_sorted()
+    Traceback (most recent call last):
+    ...
+    NameError: name 'my_list2' is not defined
+
+list passed:
+    >>> a = [3, 2, 1]
+    >>> alist = MyList(a)
+    >>> alist.print_sorted()
+    [1, 2, 3]
+
+empty list:
+    >>> a = []
+    >>> alist = MyList(a)
+    >>> alist.print_sorted()
+    []
