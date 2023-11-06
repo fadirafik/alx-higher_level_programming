@@ -19,14 +19,22 @@ not defined test:
     ...
     NameError: name 'my_list2' is not defined
 
-list passed:
+list passed test:
     >>> a = [3, 2, 1]
     >>> alist = MyList(a)
     >>> alist.print_sorted()
     [1, 2, 3]
 
-empty list:
+empty list test:
     >>> a = []
     >>> alist = MyList(a)
     >>> alist.print_sorted()
     []
+
+one number test:
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.print_sorted()
+    [1]
+    >>> print(my_list)
+    [1]
