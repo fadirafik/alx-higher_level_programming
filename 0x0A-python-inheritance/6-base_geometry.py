@@ -9,4 +9,4 @@ class BaseGeometry:
 
     def area(self):
         """returns the area of the object"""
-        raise Exception('area() is not defined')
+        raise Exception('area() is not implemented')
