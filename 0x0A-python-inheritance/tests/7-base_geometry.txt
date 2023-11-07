@@ -29,14 +29,14 @@ Trying to print the area test:
     >>> bg = BaseGeometry()
     >>> bg.area()
     Traceback (most recent call last):
-    	      ...
+    ...
     Exception: area() is not implemented
 
 Trying to pass a boolean value test:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("name", True)
     Traceback (most recent call last):
-    	      ...
+    ...
     TypeError: name must be an integer
 
 Passing a positive value test:
@@ -47,28 +47,28 @@ Passing one argument to integer_validator test:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("name")
     Traceback (most recent call last):
-    	      ...
+    ...
     TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
 
 Integer_validator with no arguments test:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator()
     Traceback (most recent call last):
-    	      ...
+    ...
     TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 Passing three arguments to integer_validator test:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("name", 1, 2)
     Traceback (most recent call last):
-    	      ...
+    ...
     TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
 
 Passing one argument to area method test:
     >>> bg = BaseGeometry()
     >>> bg.area(5)
     Traceback (most recent call last):
-    	      ...
+    ...
     TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
 
 
@@ -76,7 +76,7 @@ Passing two arguments to area method test:
     >>> bg = BaseGeometry()
     >>> bg.area(5, 5)
     Traceback (most recent call last):
-    	      ...
+    ...
     TypeError: BaseGeometry.area() takes 1 positional argument but 3 were given
 
 
@@ -84,21 +84,21 @@ Passing list to method test:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", [3])
     Traceback (most recent call last):
-    	      ...
+    ...
     TypeError: age must be an integer
 
 Passing tuple to method test:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", (4,))
     Traceback (most recent call last):
-    	      ...
+    ...
     TypeError: age must be an integer
 
 Passing dict to method test:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", {3, 4})
     Traceback (most recent call last):
-              ...
+    ...
     TypeError: age must be an integer
 
 
@@ -106,5 +106,5 @@ Passing None to method test:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", None)
     Traceback (most recent call last):
-              ...
+    ...
     TypeError: age must be an integer
