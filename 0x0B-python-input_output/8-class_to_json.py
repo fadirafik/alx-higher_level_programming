@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Defines a Python class-to-JSON function."""
+"""Defines a Python dictionary"""
 
 
 def class_to_json(obj):
-    """Return the dictionary represntation of a simple data structure."""
+    """Return the dictionary"""
     return obj.__dict__
