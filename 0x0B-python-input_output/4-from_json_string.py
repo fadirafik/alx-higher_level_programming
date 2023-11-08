@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""string to obj module"""
 import json
 
 
