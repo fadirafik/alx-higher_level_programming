@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """rectangle module"""
-
-
 from models.base import Base
 
 
@@ -37,6 +35,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """sets the value of height"""
         if type(value) is not int:
             raise TypeError('height must be an integer')
         if value <= 0:
@@ -50,6 +49,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """sets the value of x"""
         if type(value) is not int:
             raise TypeError('x must be an integer')
         if value < 0:
@@ -63,6 +63,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """sets the value of y"""
         if type(value) is not int:
             raise TypeError('y must be an integer')
         if value < 0:
@@ -70,10 +71,12 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """returns the area of the rectangle"""
         self.area = self.__height * self.__width
         return self.area
 
     def display(self):
+        """displays the recrangle on the stdout"""
         if self.__height == 0 or self.__width == 0:
             print("")
             return
@@ -86,12 +89,14 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
+        """sets the string of a class"""
         strin = "[{}] ({}) {}/{} - {}/{}".\
             format(type(self).__name__, self.id, self.__x,
                    self.__y, self.__width, self.__height)
         return strin
 
     def update(self, *args):
+        """updates the initiation of a class call"""
         if args and len(args) != 0:
             a = 0
             for arg in args:
