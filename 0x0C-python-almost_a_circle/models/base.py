@@ -26,6 +26,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_obj):
+        """adds the json object to a file"""
         x = cls.__name__
         x += ".json"
         newlis = []
