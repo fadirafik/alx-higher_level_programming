@@ -18,6 +18,7 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
+        """sets the size of the square object"""
         self.width = value
         self.height = value
 
@@ -62,7 +63,7 @@ class Square(Rectangle):
         """returns a dictionary from the instance attributes"""
         return {
             "id": self.id,
-            "size": self.height,
+            "size": self.width,
             "x": self.x,
             "y": self.y
         }
