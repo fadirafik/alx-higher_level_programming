@@ -31,7 +31,10 @@ class Base:
         x += ".json"
         newlis = []
         with open(x, "w") as fil:
-            for ls in list_obj:
-                newlis.append(ls.to_dictionary())
-            s = cls.to_json_string(newlis)
-            fil.write(s)
+            if list_obj is None:
+                file.write("[]")
+            else:
+                for ls in list_obj:
+                    newlis.append(ls.to_dictionary())
+                s = cls.to_json_string(newlis)
+                fil.write(s)
