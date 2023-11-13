@@ -38,3 +38,8 @@ class Base:
                     newlis.append(ls.to_dictionary())
                 s = Base.to_json_string(newlis)
                 fil.write(s)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the json string representation"""
+        return json.loads(json_string)
