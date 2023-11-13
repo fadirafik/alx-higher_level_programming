@@ -36,5 +36,5 @@ class Base:
             else:
                 for ls in list_obj:
                     newlis.append(ls.to_dictionary())
-                s = cls.to_json_string(newlis)
+                s = Base.to_json_string(newlis)
                 fil.write(s)
