@@ -95,7 +95,7 @@ class Rectangle(Base):
                    self.__y, self.__width, self.__height)
         return strin
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """updates the initiation of a class call"""
         if args and len(args) != 0:
             a = 0
@@ -114,3 +114,29 @@ class Rectangle(Base):
                 elif a == 4:
                     self.y = arg
                 a += 1
+
+        elif kwargs and len(kwargs) != 0:
+            for key, item in kwargs.items():
+                if key == "id":
+                    if item is None:
+                        self.__initt__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = item
+                elif key == "height":
+                    self.__height = item
+                elif key == "width":
+                    self.__width = item
+                elif key == "x":
+                    self.__x = item
+                elif key == "y":
+                    self.__y = item
+
+    def to_dictionary(self):
+        """returns a dictionary from the instance attributes"""
+        return {
+            "id": self.id,
+            "height": self.height,
+            "width": self.width,
+            "x": self.x,
+            "y": self.y
+        }
