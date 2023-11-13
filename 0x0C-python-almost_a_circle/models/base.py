@@ -45,3 +45,10 @@ class Base:
         if json_string is None or json_string == "[]":
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """creates an instance from a dictionary"""
+        dummy = cls(0, 0, 0, 0)
+        dummy.update(**dictionary)
+        return dummy
