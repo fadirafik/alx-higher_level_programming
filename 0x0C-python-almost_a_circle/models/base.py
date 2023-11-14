@@ -52,3 +52,15 @@ class Base:
         dummy = cls(0, 0, 0, 0)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """loads a file to a class"""
+        x = cls.__name__ + ".json"
+        newlis = []
+        try:
+            with open(x, "r") as fil:
+                instance = Base.from_json_string(fil.read())
+            return [cls.create(**d) for d in instance]
+        except IOError:
+            return []
